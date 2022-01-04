@@ -1387,22 +1387,170 @@ php > echo ceil(2.5);
 php >      
 				
 	
-	2. Relational Operator.
-	3. conditional Operator.
-	4. logical Operator.
-	5. special Operator.
+	2. Relational Operator : are used for comparison.
+		1.Equality Relation	
+			1. strict Equality : a==b, a===b
+					1. value comparsion a==b
+					2. value with type comparsion a==b
+			2. slack Equality
+					1. less equal to. (<=)
+					2. greater than equal to. (>=)
+								
+		2.In-equality Relation 
+			1. unequal (not equal) 
+				1. != (Not Equal)
+				2. <> (Never Happen)
+			2. strict In-equality
+				1. > (greater than)
+				2. < (less than)
+				
+				Result will be always boolean true or false.
+				Note :: except, slack equality all are simple relation.
+				where as slack equality is a compound relations.
+		
+	
+	3. conditional Operator : are the part of ternary Operator.
+	  and called as, short hand notation of if-else
+	  
+	  <expression or condition>?return <true>:return <false>;
+	  These are called ternary Because of Three Operands
+	  
+	  if expression is true then true will return else false will return.
+	  
+	  Eg:
+	  $a = 10;
+	  $x = ($a>2)? "hi" :"hello";
+	  echo $x;
+	  
+	  Task:-
+	  ***********
+	  1. wap to find |x|
+	  2. wap to find odd & even 
+		1. time and space complexity.
+	  3. wap to find +ve and -ve 
+	  without using if-else.
+	  4. wap to find perfect number.
+	  Hint:-
+	  6 is perfect number
+	  1,2,3 = 1+2+3 = 6 using Recursion.
+ 
+	4. logical Operator :  These are used to perform conjuction, B/w
+	two conditions.
+	1. && : Match all the condition to be true. (AND Gate Operation)
+	2. || : Match one or more condition to be true. (OR Gate Operation)
+	3. ! : reverse conditions. (Not Gate Operation)
+	
+	&&
+	***
+	A | B | A && B
+	***************
+	0 | 0 | 0
+	0 | 1 | 0
+	1 | 0 | 0
+	1 | 1 | 1
+	******************
+	
+	||
+	***
+	A | B | A || B
+	***************
+	0 | 0 | 0
+	0 | 1 | 1
+	1 | 0 | 1
+	1 | 1 | 1
+	******************
+	
+	||
+	***
+	A | !A
+	**********
+	0 | 1 
+	1 | 0
+	**********
+	
+	5. special Operator : PHP Supports Few Operators which are reserved
+		for special purpose and are called as, Special Operators.
+	
+		Special Operators have Following Types:-
+		1. Modify Operators
+			1. pre Modify 2. Post Modify
+			--$i, ++$i      $i++, $i--
+		2.	Reference Operators (&)  : In case of call By Reference.
+		3.  String Operator (Concatenation Operator)
+			1. Concatenation  2. Append Operation.
+		
+		4. Array Operators.
+	
 	6. Bitwise Operator.
-	7. Assignment Operator.
+	7. Assignment Operator :it is used to Assign the value of Evaluated Expression
+	from Right to Left.
+	
+	$sum = $sum + n; ----> $sum+=n;
+	$sum = $sum * n; ----> $sum*=n;
+	$sum = $sum / n; ----> $sum/=n;
+	$sum = $sum % n; ----> $sum%=n;
+	$sum = $sum . n; ----> $sum.=n;
+	
+	Question :-
+	
+	  #$x+=1 and $x=+1 and $x++ ??
+	# Increment by 1 $x+=1
+	# $x is assigned by +1
+	#  Another form of, $x++ Increment = post 
+     increment.	
 	
 2. Modern Operators 7.x Version.
 	1. Membership Operator
 	2. NullCoalescing Operator
-	3. Flagship Operators.
+	3. Flagship(space-sphip) Operators. 
 	
 
+String Operator (Concatenation Operator)
+1. Concatenation  2. Append Operation.
+
+use to concate the values , together
+we know that, PHP nature is Dynamic, it will type caste int,values to string
+for concatenation.
+
+since this, concatenation will be performed on the string data types only
+hence called as string Operators.
+
+Difference B/w concate Operator
+and Append Operator.
+
+.= (String Assigment Operator)
+once used, concate Operator
+
+.= (String Assigment Operator)
+mulitple times used, append Operator
+
+wap in PHP to make user-defined string_repeat function which, repeat the string
+n no of times
+
+string_repeat('H',10);  ---> HHHHHHHHHH or
+str_multiply('H',10); ----> HHHHHHHHHH
+
+Array Operators :- 
+[] --> Subscript Operator --> Index Operator ---> Key Operator
+
+In order to declare the Array we can use [] subscript Operator.
+We can few mathematical Operation to perform, Array Operation
+
+1. Union of Array : + Operator
+2. Slack Equality of Array (value Equality) : ==
+3. Strict Equality of Array (value and type(order) Equality) or Indentity Operation: ===
+4. Not Equal Array : !=
+5. UnIdentical Array Operations. !==
 
 
+1. Membership Operator : && --> and || ---> or ^ (xor) ---> xor
+2. NullCoalescing Operator : ??
 	
+3. Flagship(space-sphip) Operators.
+
+
+
+
 
 	
 	

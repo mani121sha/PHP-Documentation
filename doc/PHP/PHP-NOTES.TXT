@@ -1542,11 +1542,355 @@ We can few mathematical Operation to perform, Array Operation
 4. Not Equal Array : !=
 5. UnIdentical Array Operations. !==
 
-
 1. Membership Operator : && --> and || ---> or ^ (xor) ---> xor
 2. NullCoalescing Operator : ??
+3. Flagship(space-sphip) Operators. (<=>)
+
+
+Flow controls In PHP
+********************
+What is the flow controls  in Programming :-
+Flow controls means how you program will execute in Primary Memory, at Runtime.
+
+What is Normal Execution of the Program?
+
+There are Two Approach of the Normal Execution of the program
+1. Top to Bottom Approach:
+	The Program will start from very first line of the program, and stop at last line 
+	of the program then it is called normal execution of program in T-B Approach.
 	
-3. Flagship(space-sphip) Operators.
+	How many ways we can control it:-
+	1. Decision Control Block : it allows the user, to control the execution of specific
+		line of code.
+			1. Selection Block
+			2. Conditional Block
+			3. Nested Conditional Block
+	2. Return Control Blocks
+	3. Loop Control Blocks
+	4. Jump Control Blocks
+	
+	Note :: statements : Line or peice of code inside the Block, and Structure wrapping
+	those line of statement is called as Block.
+	
+2. Left to Right Program
+	Whenever a an expression is solved, it will be solved, from left to Right by default.
+	But if we want to control the normal execution, we can modify it to, right to left.
+	This can be done by using Operators.
+	Operators will utilise, Associativity and Precedence Order to achieve this.
+	Eg 1:
+	2+2+2-2 L-R (+,- Operator Associativity L->R)
+	$x=2+2 R-L (= Operator Associativity R->L)
+	
+	Execution L->R
+	echo "The Result = ".10+20;   Associativity L->R 
+	^
+	|----> L->R
+	Error : non-numeric value encountered error, because (.) has highest Priority then +/- 	
+	if we use () parenthesis. 
+	Execution R->L
+	echo "The Result = ".(10+20);
+							^
+					L<-R <--| 
+	step :- echo " The Result = ".30;
+				  ^
+				  |----> L->R 
+	
+	
+
+
+Selection Block : 
+	Switch Block : 1. when we have, multiple cases, and we want to execute, a given case
+					 then we go for, switch Blocks (statements).
+				   
+				   2. switch statement are considered to be best alternative, of else-if 
+				   ladder.
+				   
+	Switch are of Two Types
+		1. unchained switch.
+		2. chained switch.
+		
+		
+		General Syntax of Switch Block
+		******************************
+		
+		switch(<Evaluated Expression>){
+			case <value-1>:
+					//statement 1
+					....
+					//statement n
+				break;
+				
+			case <value-2>:
+					//statement 1
+					....
+					//statement n
+				break;
+				
+			case <value-n>:
+					//statement 1
+					....
+					//statement n
+				break;
+				
+		  default:
+				//statement 1
+				...
+				//statement n
+		  break;
+		
+		}
+		
+		
+		Note : 	Expression ---> Evaluate ---> Result
+		2>2  ---> true or false Invalid 
+		This Expression should be equal to one of case.
+		
+How to check Type of Character values:-
+PHP Provides ctype function from <ctype.h> header file.
+********************************************************
+Character =  type string and length 1 and Ascii value range Alphabets.
+
+ctype_alnum — Check for alphanumeric character(s)
+ctype_alpha — Check for alphabetic character(s)
+ctype_cntrl — Check for control character(s)
+ctype_digit — Check for numeric character(s)
+ctype_graph — Check for any printable character(s) except space
+ctype_lower — Check for lowercase character(s)
+ctype_print — Check for printable character(s)
+ctype_punct — Check for any printable character which is not whitespace or an alphanumeric character
+ctype_space — Check for whitespace character(s)
+ctype_upper — Check for uppercase character(s)
+ctype_xdigit — Check for character(s) representing a hexadecimal digit
+		
+Chanining Effect in Switch:-
+***************************
+a switch statement without any break is called as unchained switch and this effect
+is called as chaining effect.
+
+Inorder, to break the chaining effect in, switch we use minimum one break, statement for each case block.
+
+How to break the, chain in switch
+1. break : break the switch execution.
+2. exit : terminate the entire program.
+3. return : it will return the execution from bottom to Top.
+4. goto exit_label; it will take the execution of the program where ever we want.
+
+
+What is order of execution of switch block with break statement
+if condition = $x%2 having sample space = {0,1} and default at (n+1) position.
+
+1) O(1)  correct
+2) O(2)
+3) O(3)
+4) O(4)
+
+What is order of execution of switch block without break statement
+if condition = $x%2 having sample space = {0,1} and default at (n+1) position.
+
+1) O(1)
+2) O(2)
+3) O(3)
+4) O(4)
+5) O(n) correct
+
+What is max order of execution of switch block without break statement
+if condition = $x%2 having sample space = {0,1} and default at (n+1) position.
+
+1) O(1)
+2) O(2)
+3) O(3)  correct
+4) O(4)
+5) O(n)
+
+What is min order of execution of switch block without break statement
+if condition = $x%2 having sample space = {0,1} and default at (n+1) position.
+
+1) O(1)
+2) O(2) correct
+3) O(3)
+4) O(4)
+5) O(n)		
+
+
+Types of labels
+1. empty label : <lable-name>:; it does not contain any, statement within, label block
+
+2. container label : its a label block which will contain minimum one statement.
+exit_label: 
+printf("This is One statement");
+
+Type of labelled blocks in switch
+*********************************
+1. case blocks
+	1. inner case blocks
+	2. outer case blocks
+2. default blocks
+	1. inner default blocks
+	2. outer default blocks
+
+	Note :: This Blocks definition is Optional
+	Note :: This syntax is support in C langauge But PHP does not supported Outer Label Blocks but supports inner label blocks.
+	
+	The labelled block of switch allows only 256 cases as de-limiters(seperator) for 8 Bit Compiler
+	similarly for n-bit total no of cases = 2^(n) Cases.
+	
+Note :: using Automatic Script for, Testing
+
+Some times, In order to perform white box testing, for each and every project,
+becomes very hactic, so we can build a autonomous bot script to execute the program according to test cases.
+
+working with break in default case :-
+************************************
+if there are n no of cases then the actual position of default is at (n+1)th.
+if default case is at (n+1)th condition in this case, break statement is 
+optional,
+
+if default case position is at any condition B/w (1-n) then break becomes 
+mendatory, other wise, consecutive chaining effect will be seen.
+
+Multiple Correct
+*******************
+what is order(n) in switch block for default case without break at position
+B/w (1 to n)th.
+
+a) 1th
+b) 2th
+c) nth (correct)
+d) (n+1)th (correct)
+
+
+Conditional Block : if we want to execute some line of code on the basis of some 
+given condition, which is not hardcoded, then we must go for decision Block.
+
+Note :: hardcoded  and softcoded
+Harcoded
+************
+if($email=='ravi@gmail.com' and $password =='1234'){
+	echo 'login success';
+}else{
+   echo 'Invalid user name or password';
+}
+
+Softcoded
+************
+if($email==$dbemail and $password ==$dbpassword){	
+	echo 'login success';
+}else{
+   echo 'Invalid user name or password';
+}
+
+How to Apply Condition Block
+*****************************
+We can use decision control langauge construct or Keywords
+1. if 
+2. if-else 
+3. else-if ladder 
+
+1. syntax of if : 
+*******************
+	if(<Boolean-condition>){
+		// execute this line only if above condition true
+	}
+	
+	1. true ---> condition true ---> execution once 1 times.
+	2. false ---> condition false ---> exection 0 times.
+	3. '',null,false,0 all are treated as boolean false.
+	all Other values will taken boolean false.
+	
+	
+...Notes Suraj Class session...
+Nested Conditions:-
+1. One Block Inside another Blocks
+This can take any form.
+
+1.  Symmetical Nesting or Indentical Nesting.
+	Block will be used for same Kind.
+		1. if Block nested with If Blocks
+		2. if else Block nested inside if else Block
+		3. switch Block nested inside switch Block
+		4. else-if ladder nested inside else-if Block 
+	 
+2. Un-symmetrical Nesting.
+	This means One Block will be inside another, but will not belong to the same family.
+	
+	Prime Number Program using if-else 1 to 100
+	How many primes are there in 1 to 100 : 25
+	1 to 100
+	2,3,5,7,11
+	
+Looping Statements:-
+********************
+How to looping statements
+1.step 1: start from any infinite Loop
+	for(;;)
+	while(true)
+2. step 2 : Add a Counter to start the condition
+3. step 3: Add a If Block with Break to terminate the Condition.
+
+	
+How to convert Above Syntax For Loop
+1. copy starting and Put in First Block of for
+2. Copy the Modify Operator and put in last Block of for
+3. copy the if Block of break statement Inverse condition and 
+put the in middle Block
+
+if($i>=100){
+ 	break;
+}
+	 
+$i>=100 <----> $i<=100
+
+1. if Loop has a body no need of semicolon
+
+2. if loop does not have a body 
+then semicolon is mendatory.
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+
+
+
+
+
+ 
+
+
+				   
+
+
 
 
 

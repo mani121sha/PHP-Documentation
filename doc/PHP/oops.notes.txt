@@ -334,10 +334,35 @@ and In Laravel This Concept is called Template Inheritance.
 What is File-inclusion :-
 Extending the source code from one file another is called as file-inclusion.
 
-1. include.
-2. include_once.
-3. require.
-4. require_once.
+1. include :
+2. include_once :
+3. require :
+4. require_once :
+
+
+Types of error in php
+********************
+Note :: We have 16 Types of Error Level
+Dont get Confuse B/w Error Level and Legal Error.
+Legal Error, we disturb the execution of the Program.
+where as Error level will raised only after program is successfully Running.
+
+1. Parse Error : if these Error Occur, Program execution will not take place.
+2. Syntax Error : if these Error Occur, Program execution will not take place.
+But in case of Error Level for eg: undefined index Error is Notice_Error
+will generates Error, But donot the execution of the Program.
+
+Eg-2 : Deprecation Error: Due To PHP Standards there may be a chance, 
+that you are using the Latest Version of php but you are using some features which are of old legacy version in that scenerio, You will get Depraction Error instead of Terminating the Program.
+
+1. Syntax Error (parse Error,Compilation Error)
+2. Notice or Warning Error
+3. Fatal Error
+4. PHP Standard Error OR Exeception
+
+
+
+
 
 
 

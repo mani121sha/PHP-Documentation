@@ -355,10 +355,42 @@ will generates Error, But donot the execution of the Program.
 Eg-2 : Deprecation Error: Due To PHP Standards there may be a chance, 
 that you are using the Latest Version of php but you are using some features which are of old legacy version in that scenerio, You will get Depraction Error instead of Terminating the Program.
 
-1. Syntax Error (parse Error,Compilation Error)
+1. Syntax Error (parse Error,Compilation Error) : 
+	if Occured No single line will not execute.
 2. Notice or Warning Error
+	if Occured then Notice error or Warning Error is raised
+    But, it will not affect the code Just Below the, Error line
+	ie it do-not stop the, execution of the Program.
 3. Fatal Error
+	if Occured then No Line Below the code will execute Ever.
+	until Resolved.
 4. PHP Standard Error OR Exeception
+	This type of Error, Occur due to logical Mistakes, which need to
+	be either resolved or Handled using Exeception Handling, Sometimes
+	These Error can be critical Like Fatal Error, Uncaught Error
+	
+Difference B/w All of These:-
+
+1. include : Includes the files successfully and multiple-times 
+			 if found successfully if not found generates notice Error or warning Error.
+			 
+2. include_once : includes the files successfully and once only even 
+				  if we add these lines multiple times.
+				  if found successfully if not found generates notice Error or warning Error,
+				  
+3. require : means file is highly required, without this file execution of the code not be generated hence if file is found it is loaded successfully otherwise it gennerated fatal Error. and we can include
+the same file multiple times.
+
+4. require_once : In require same file cannot be included multiple 
+times. and if not found it will generate the Error.
+
+Type :  include 		|include_once		|require 		|require_once	
+file     
+loading  multiple times.   only once.          multiple times.  Only once. 
+Error    warning Error     warning Error       Fatal Error     Fatal Error
+Memory   more               less                more           less
+
+
 
 
 

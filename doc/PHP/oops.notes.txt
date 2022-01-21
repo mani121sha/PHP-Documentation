@@ -390,6 +390,40 @@ loading  multiple times.   only once.          multiple times.  Only once.
 Error    warning Error     warning Error       Fatal Error     Fatal Error
 Memory   more               less                more           less
 
+Access Modifiers:-
+*****************
+Access Modifiers are verbs when added Before any Instance Variable
+or method, makes it hidden from the different scopes.
+
+Possible Number of scopes
+***************************
+
+1. From Outside the class 
+2. From Inside the Class
+3. From Child Class
+
+Difference B/w Public,private,protected
+
+location : 			public  | 	protected 		|private
+********************************************************* 
+outside class : 	valid   |    ---            | ---
+inside class  :		valid   |   valid           | valid
+child class   :     valid   |   valid           | ---
+
+
+Method Chaining in PHP
+**********************
+chaining one method with different method without destroying the instance
+is called as method chaining.
+it is widely used by laravel,codeIgnitor and MVC Framework.
+
+
+
+
+
+
+
+
 
 
 

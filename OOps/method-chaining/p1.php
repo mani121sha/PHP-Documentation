@@ -5,23 +5,28 @@
 Class Test{
 	
 public function a(){
-
+	
 echo "a is called \n";
 return $this;
+
 }
 
 public function b(){
 	
 echo "b is called \n";
 return $this; #return current Instance ($this)
+
 }
 
 public function c(){
+	
 echo "c is called \n";
 return $this;
+
 }
 
 public function d(){
+	
 echo "d is called \n";
 return $this;
 

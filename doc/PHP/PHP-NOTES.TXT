@@ -1841,9 +1841,133 @@ if($i>=100){
 $i>=100 <----> $i<=100
 
 1. if Loop has a body no need of semicolon
-
 2. if loop does not have a body 
 then semicolon is mendatory.
+
+Introduction to PDBC (PHP Database Connnectivity)
+
+****************************************************
+PDBC : Connecting PHP Application with Database is called php 
+database connectivity.
+
+Why PDBC ?
+If we want to make Application where storage of data is important
+such that using that data one can drive entire, Enterprise then we require database.
+
+How to connect PHP Application with Database
+1. mysql : Mysql
+2. PDO : PHP Database Object (It support n no of databases.)
+
+Connecting PHP Application to Mysql
+************************************
+localhost:786/adminer/
+
+System : mysql
+server : localhost:3308
+username: root
+password:
+database:
+Login Click
+
+Step to Connect with Database:-
+********************************
+1. Make Database Connection using mysqli_connect function, 
+	by supplied hostname:port,username,password,dbname
+2. Test For the Connection created Or Not
+3. Use Exception Handling to Handle Any Error Occured
+4. Prepare the Query.
+5. Execute or Fire the Query.
+6. If Query is Writable, look for the changes.
+7. If Query is Readable, Capture the Result Set.
+8. Look for the No of Matched Records as per Query.
+9. Convert the MYSQL Result Set into Associative Array.
+10. use if for single Record or Foreach or while for multiple Record.
+11. Perform All Other Operation Required As per Requirement.
+
+Exception Handling:-
+********************
+What are Exception:- Exception are the Logical Bugs or error that are 
+Occured  during execution of the Program for some special condition match.
+
+When ever Exception are Occured the Program would terminate suddenly.
+In Order to Handle Exception we have special Block of code 
+which are used to handle Exception.
+
+Exception Handling using try-catch-finally Block
+***********************************************
+try : this blocks tries to execute the code placed inside this Block.
+	  if some Exception is raised then it will be send to catch block.
+
+Catch : Catch Block is used, to raise the Exception.
+Finally : Finally Block will execute the code at any condition 
+		  Either the Exception is raised or not.
+		  
+throw : it used to throw any new Exception to the catch Block
+			
+Example :- One Such type of Exception are, Mathematical-Error,SQLException-Error
+Mathematical-Error Error will occur as soon as Divisor = 0 which
+will generate Infinity.
+
+Connecting to Mysql Database
+*******************************
+
+In Order to connect to database 
+1. $conn = mysqli_connect($hostname,$username,$password,$dbname);
+
+$dbname is Optional
+$dbname : app2021
+
+$hostname : localhost:<port-no>
+			or
+			<ip4 or ip6>:<port-no>
+			
+if by default port is 3306
+			localhost
+			127.0.0.1
+		
+$username : Root (by-default) depends upon System to System.
+			system (by-default) mongo-Db, Oracle.
+			PC-NAME (by-default) SQL server.
+			
+$password : Blank '' or ""
+
+Best Practise to be used while making Project
+*********************************************
+in a Project, there may n no of constants, n of important varaible 
+which will hold some important credentials or settings.
+Adding all these configuration into a file like
+settings.php
+env.php
+.env
+config.php
+...
+...
+...
+
+
+			
+			
+			
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	
 	

@@ -2005,6 +2005,45 @@ After Getting the Result set, Convert the Result set into Associative Array.
 Wap in PHP to show, How to Handle Associative Array using Foreach
 *******************************************************************
 
+1. Introduction to Json:-
+json: javascript Object Notation
+Json is not type of Technology, Programming Langauge, Tools
+It is just a standard data Convetion
+
+Tags : Data ---> Html
+Tags : Data ---> XML
+Data : Represent ---> Key and value pairs ---> such that it is highly transpotable over a network then it is called as, JSON.
+
+1. object : {}
+Eg :-
+{"name":"awnish","class":"12th","marks":50}
+	|Keys  |value  |keys   |value  |key |value
+	
+2. Array : [Element1,Element2,Element3...]
+3. Array of Object
+	[
+		{"name":"awnish","class":"12th","marks":50},
+		{"name":"awnish","class":"12th","marks":50}
+		{"name":"awnish","class":"12th","marks":50}
+		{"name":"awnish","class":"12th","marks":50}
+	],
+	[
+		{"name":"awnish","class":"12th","marks":50},
+		{"name":"awnish","class":"12th","marks":50}
+		{"name":"awnish","class":"12th","marks":50}
+		{"name":"awnish","class":"12th","marks":50}
+	],
+	[
+		{"name":"awnish","class":"12th","marks":50},
+		{"name":"awnish","class":"12th","marks":50}
+		{"name":"awnish","class":"12th","marks":50}
+		{"name":"awnish","class":"12th","marks":50}
+	]
+	
+	This format of data is called as, Document Data format.
+	
+
+
 
 
 

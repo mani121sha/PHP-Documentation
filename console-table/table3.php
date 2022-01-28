@@ -7,17 +7,17 @@ $table = new LucidFrame\Console\ConsoleTable();
 
 $table
    ->addHeader('Sr No.')
-    ->addHeader('Roll')
+    ->addHeader('Id')
     ->addHeader('Name')
-    ->addHeader('Marks');
+    ->addHeader('Email');
 $i=1;
 
-foreach($students as $student){
+foreach($records as $record){
    $table->addRow()
 		->addColumn($i)
-        	->addColumn($student['roll'])
-        	->addColumn($student['name'])
-		->addColumn($student['marks']);
+        	->addColumn($record['id'])
+        	->addColumn($record['name'])
+		->addColumn($record['email']);
 
 $i++;
 }
